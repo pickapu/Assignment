@@ -1,0 +1,358 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#f5f5f5">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        android:id="@+id/lldate">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layerType="software"
+            android:layout_weight="1"
+        android:background="@drawable/line_stroke" />
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:text="Date"
+            android:id="@+id/tvTopDate"
+            android:layout_weight="2"
+            android:gravity="center"
+            android:textSize="16dp"
+            android:textColor="@color/black"
+            android:layout_centerVertical="true"/>
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layerType="software"
+            android:layout_weight="1"
+            android:textAlignment="center"
+            android:background="@drawable/line_stroke" />
+    </LinearLayout>
+    <RelativeLayout
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+        android:layout_below="@+id/lldate"
+        android:id="@+id/ldetail"
+        android:layout_marginRight="5dp"
+        android:visibility="gone">
+    <RelativeLayout
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/toolbar_background"
+        android:id="@+id/linnerdetail"
+
+        >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lmoney"
+            android:layout_marginLeft="5dp"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_attach_money_24"
+                android:layout_gravity="center_vertical"
+                />
+            <TextView
+                android:id="@+id/ltvAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="4000"
+                android:textColor="@color/black"
+                android:textSize="40sp"
+                android:gravity="center"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginHorizontal="10dp"
+            android:id="@+id/lstatus"
+            android:layout_alignParentRight="true"
+            >
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/livCheck"
+                android:gravity="center_vertical"
+                android:src="@drawable/ic_baseline_check_24"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="you paid"
+                android:textColor="@color/black"
+                android:id="@+id/ltvStatus"
+                android:layout_gravity="center_vertical"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lmoney"
+            android:orientation="horizontal"
+            android:layout_alignParentLeft="true"
+            android:layout_marginBottom="10dp"
+            >
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/thbuttons"
+                android:text="Cancel"
+                android:id="@+id/lbtCancel"
+                android:textSize="14sp"
+                android:visibility="gone"
+                android:textColor="@color/black"
+                android:layout_marginHorizontal="5dp"
+                android:paddingHorizontal="20dp"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/thbuttons"
+                android:text="pay"
+                android:id="@+id/lbtPay"
+                android:textSize="14sp"
+                android:visibility="gone"
+                android:textColor="@color/black"
+                android:layout_marginHorizontal="5dp"
+                android:paddingHorizontal="20dp"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/thbuttons"
+                android:text="Decline"
+                android:layout_marginHorizontal="5dp"
+                android:textSize="14sp"
+                android:id="@+id/lbtDecline"
+                android:visibility="gone"
+                android:textColor="@color/black"
+                android:paddingHorizontal="20dp"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lmoney"
+            android:id="@+id/ltransactionId"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Transaction ID"
+                android:textColor="@color/black"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/ltvTransactionIdNumber"
+                android:text="Transaction id no"
+                android:textColor="@color/black"/>
+
+        </LinearLayout>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/livRightArrow"
+            android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+            android:layout_alignParentRight="true"
+
+            android:layout_below="@id/lstatus"
+
+            />
+
+
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linnerdetail">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ltvDateTime"
+            android:text="19 nov 2020,1024Am"
+            android:textColor="@color/black"
+
+            android:layout_alignParentRight="true"
+
+            />
+    </RelativeLayout>
+</RelativeLayout>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lldate"
+        android:id="@+id/detail"
+        android:layout_marginLeft="5dp"
+        android:layout_alignParentRight="true"
+        >
+
+        <RelativeLayout
+            android:id="@+id/innerdetail"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/toolbar_background"
+
+            >
+
+            <LinearLayout
+                android:id="@+id/money"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/ic_baseline_attach_money_24" />
+
+                <TextView
+                    android:id="@+id/tvAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:text="4000"
+                    android:textColor="@color/black"
+                    android:textSize="40sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/status"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginHorizontal="10dp">
+
+                <ImageView
+                    android:id="@+id/ivCheck"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center_vertical"
+                    android:src="@drawable/ic_baseline_check_24" />
+
+                <TextView
+                    android:id="@+id/tvStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text="you paid"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/money"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="10dp"
+
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btCancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:background="@drawable/thbuttons"
+                    android:paddingHorizontal="20dp"
+                    android:text="Cancel"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btPay"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:background="@drawable/thbuttons"
+                    android:paddingHorizontal="20dp"
+                    android:text="pay"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btDecline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:background="@drawable/thbuttons"
+                    android:paddingHorizontal="20dp"
+                    android:text="Decline"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/transactionId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/money"
+                android:layout_marginLeft="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Transaction ID"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/tvTransactionIdNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Transaction id no"
+                    android:textColor="@color/black" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/ivRightArrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/status"
+                android:layout_alignParentRight="true"
+
+                android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+
+                />
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/innerdetail">
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/tvDateTime"
+    android:text="19 nov 2020,1024Am"
+    android:textColor="@color/black"
+
+    android:layout_alignParentRight="true"
+
+    />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

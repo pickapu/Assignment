@@ -11,6 +11,7 @@ class MainActivity : AppCompatActivity() {
         binding= ActivityMainBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+        //intent to move to transaction screen
         binding.btTransactionHistory.setOnClickListener {
             val intent= Intent(this,TransactionHistory::class.java)
             startActivity(intent)

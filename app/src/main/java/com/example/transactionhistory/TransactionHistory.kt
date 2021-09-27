@@ -55,7 +55,7 @@ class TransactionHistory : AppCompatActivity() {
 
     }
 
-
+//make api call to receive data
     private fun makeApicall() {
 
         val retrofit: Retrofit = Retrofit.Builder().baseUrl("https://dev.onebanc.ai/")
@@ -84,7 +84,7 @@ class TransactionHistory : AppCompatActivity() {
         })
     }
 
-
+// function to make custom progress bar
     private fun showProgressDialog() {
         customProgressDialog = Dialog(this@TransactionHistory)
         customProgressDialog.setContentView(R.layout.dialog_custom_progress)
@@ -92,9 +92,14 @@ class TransactionHistory : AppCompatActivity() {
         customProgressDialog.show()
     }
 
+    //function to cancel custom progress bar
+
     private fun cancelProgressDialog() {
         customProgressDialog.dismiss()
     }
+
+
+    //function to setup the recycler view to show no of transaction
 
     private fun setupPaymentStatusRecyclerView(data: DataClass) {
         binding.rvHistory.layoutManager =

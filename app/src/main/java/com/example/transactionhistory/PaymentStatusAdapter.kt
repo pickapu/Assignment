@@ -18,6 +18,7 @@ RecyclerView.Adapter<PaymentStatusAdapter.ViewHolder>(){
         var month:String?=null
         var year:String?=null
     }
+
     class ViewHolder(binding:ItemHistoryRowBinding):RecyclerView.ViewHolder(binding.root){
         val date=binding.tvTopDate
         val lldat=binding.lldate
@@ -52,7 +53,7 @@ RecyclerView.Adapter<PaymentStatusAdapter.ViewHolder>(){
        val model = item.transactions[position]
 
         if(date==null){
-
+//display the transaction  details
             date= model.startDate.subSequence(0,10).toString()
             holder.date.text= dateSetter(model.startDate.subSequence(0,10).toString())
             if(model.direction==1){
@@ -109,7 +110,7 @@ RecyclerView.Adapter<PaymentStatusAdapter.ViewHolder>(){
                 }
 
             }
-        }else if(date==model.startDate.subSequence(0,10)){
+        }else if(date==model.startDate.subSequence(0,10)){   //check if transaction are done on same day or not
 
             holder.lldat.visibility=View.GONE
             if(model.direction==1){
@@ -235,6 +236,9 @@ RecyclerView.Adapter<PaymentStatusAdapter.ViewHolder>(){
     override fun getItemCount(): Int {
         return item?.transactions?.size ?: 0
     }
+
+
+    //function to set the date
 private fun dateSetter(date:String):String{
      day= date.subSequence(8,10).toString()
     val mon=date.subSequence(5,7).toString()
